@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
-const AUTH_PATH = path.join(os.homedir(), '.pno-sync-cli', 'auth.json')
+const AUTH_PATH = path.join(os.homedir(), '.sync-cli', 'auth.json')
 
 export function isAuthenticated(): boolean {
   try {
