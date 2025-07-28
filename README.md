@@ -28,7 +28,7 @@ $ npm install -g @pnodev/sync-cli
 $ sync-cli COMMAND
 running command...
 $ sync-cli (--version)
-@pnodev/sync-cli/0.1.2 linux-x64 node-v20.5.1
+@pnodev/sync-cli/0.1.3 linux-x64 node-v20.5.1
 $ sync-cli --help [COMMAND]
 USAGE
   $ sync-cli COMMAND
@@ -62,7 +62,7 @@ DESCRIPTION
   Send a payload to a topic channel
 ```
 
-_See code: [src/commands/generate-types.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.2/src/commands/generate-types.ts)_
+_See code: [src/commands/generate-types.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/generate-types.ts)_
 
 ## `sync-cli help [COMMAND]`
 
@@ -99,7 +99,7 @@ EXAMPLES
   $ sync-cli login
 ```
 
-_See code: [src/commands/login.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.2/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/login.ts)_
 
 ## `sync-cli send`
 
@@ -119,5 +119,5 @@ DESCRIPTION
   Send a payload to a topic channel
 ```
 
-_See code: [src/commands/send.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.2/src/commands/send.ts)_
+_See code: [src/commands/send.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/send.ts)_
 <!-- commandsstop -->
