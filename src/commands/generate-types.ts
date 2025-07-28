@@ -50,7 +50,7 @@ function jsonSchemaToType(s: JsonSchema, indent: string = '  '): string {
   }
 }
 
-export function payloadSchemaToType(schema: PayloadSchema, name: string = 'PayloadSchema'): string {
+export function payloadSchemaToType(schema: PayloadSchema, name: string = 'payload'): string {
   const props = Object.entries(schema)
     .map(([key, value]) => {
       const optional = value.required === false ? '?' : ''
@@ -66,7 +66,7 @@ export default class GenerateTypes extends Command {
   static flags = {
     appId: Flags.string({description: 'App ID', required: true}),
     exportName: Flags.string({
-      default: 'PayloadSchema',
+      default: 'payload',
       description: 'Name of the generated type',
       required: false,
     }),
