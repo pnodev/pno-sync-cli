@@ -1,7 +1,7 @@
 {
-  "name": "pno-sync-cli",
+  "name": "@pnodev/sync-cli",
   "description": "A new CLI generated with oclif",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Pno",
   "bin": {
     "pno-sync-cli": "./bin/run.js"
