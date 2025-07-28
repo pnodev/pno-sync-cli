@@ -10,7 +10,6 @@
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
-    "@oclif/plugin-plugins": "^5",
     "axios": "^1.10.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
@@ -52,12 +51,11 @@
   "main": "dist/index.js",
   "type": "module",
   "oclif": {
-    "bin": "pno-sync-cli",
+    "bin": "sync-cli",
     "dirname": "pno-sync-cli",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-help"
     ],
     "topicSeparator": " ",
     "topics": {
