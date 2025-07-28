@@ -83,7 +83,7 @@ export default class GenerateTypes extends Command {
 
     const {flags} = await this.parse(GenerateTypes)
 
-    const url = `${process.env.PNO_SYNC_ENGINE_URL}/stream/${flags.appId}/schema?key=${flags.key}`
+    const url = `${process.env.SYNC_ENGINE_URL}/stream/${flags.appId}/schema?key=${flags.key}`
 
     try {
       const response = await axios.get(url)

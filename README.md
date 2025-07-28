@@ -7,46 +7,66 @@ A new CLI generated with oclif
 [![Downloads/week](https://img.shields.io/npm/dw/pno-sync-cli.svg)](https://npmjs.org/package/pno-sync-cli)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [pno-sync-cli](#pno-sync-cli)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
-$ npm install -g pno-sync-cli
+$ npm install -g @pnodev/sync-cli
 $ pno-sync-cli COMMAND
 running command...
 $ pno-sync-cli (--version)
-pno-sync-cli/0.0.0 linux-x64 node-v20.5.1
+@pnodev/sync-cli/0.1.0 linux-x64 node-v20.5.1
 $ pno-sync-cli --help [COMMAND]
 USAGE
   $ pno-sync-cli COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`pno-sync-cli generate-types`](#pno-sync-cli-generate-types)
+* [`pno-sync-cli hello PERSON`](#pno-sync-cli-hello-person)
+* [`pno-sync-cli hello world`](#pno-sync-cli-hello-world)
+* [`pno-sync-cli help [COMMAND]`](#pno-sync-cli-help-command)
+* [`pno-sync-cli login`](#pno-sync-cli-login)
+* [`pno-sync-cli plugins`](#pno-sync-cli-plugins)
+* [`pno-sync-cli plugins add PLUGIN`](#pno-sync-cli-plugins-add-plugin)
+* [`pno-sync-cli plugins:inspect PLUGIN...`](#pno-sync-cli-pluginsinspect-plugin)
+* [`pno-sync-cli plugins install PLUGIN`](#pno-sync-cli-plugins-install-plugin)
+* [`pno-sync-cli plugins link PATH`](#pno-sync-cli-plugins-link-path)
+* [`pno-sync-cli plugins remove [PLUGIN]`](#pno-sync-cli-plugins-remove-plugin)
+* [`pno-sync-cli plugins reset`](#pno-sync-cli-plugins-reset)
+* [`pno-sync-cli plugins uninstall [PLUGIN]`](#pno-sync-cli-plugins-uninstall-plugin)
+* [`pno-sync-cli plugins unlink [PLUGIN]`](#pno-sync-cli-plugins-unlink-plugin)
+* [`pno-sync-cli plugins update`](#pno-sync-cli-plugins-update)
+* [`pno-sync-cli send`](#pno-sync-cli-send)
 
-- [`pno-sync-cli hello PERSON`](#pno-sync-cli-hello-person)
-- [`pno-sync-cli hello world`](#pno-sync-cli-hello-world)
-- [`pno-sync-cli help [COMMAND]`](#pno-sync-cli-help-command)
-- [`pno-sync-cli plugins`](#pno-sync-cli-plugins)
-- [`pno-sync-cli plugins add PLUGIN`](#pno-sync-cli-plugins-add-plugin)
-- [`pno-sync-cli plugins:inspect PLUGIN...`](#pno-sync-cli-pluginsinspect-plugin)
-- [`pno-sync-cli plugins install PLUGIN`](#pno-sync-cli-plugins-install-plugin)
-- [`pno-sync-cli plugins link PATH`](#pno-sync-cli-plugins-link-path)
-- [`pno-sync-cli plugins remove [PLUGIN]`](#pno-sync-cli-plugins-remove-plugin)
-- [`pno-sync-cli plugins reset`](#pno-sync-cli-plugins-reset)
-- [`pno-sync-cli plugins uninstall [PLUGIN]`](#pno-sync-cli-plugins-uninstall-plugin)
-- [`pno-sync-cli plugins unlink [PLUGIN]`](#pno-sync-cli-plugins-unlink-plugin)
-- [`pno-sync-cli plugins update`](#pno-sync-cli-plugins-update)
+## `pno-sync-cli generate-types`
+
+Send a payload to a topic channel
+
+```
+USAGE
+  $ pno-sync-cli generate-types --appId <value> --key <value> [--exportName <value>] [--output <value>]
+
+FLAGS
+  --appId=<value>       (required) App ID
+  --exportName=<value>  [default: payload] Name of the generated type
+  --key=<value>         (required) Public Key
+  --output=<value>      [default: stdout] Output target: "stdout" (default) or filename (e.g. types.ts)
+
+DESCRIPTION
+  Send a payload to a topic channel
+```
+
+_See code: [src/commands/generate-types.ts](https://github.com/files/pno-sync-cli/blob/v0.1.0/src/commands/generate-types.ts)_
 
 ## `pno-sync-cli hello PERSON`
 
@@ -70,7 +90,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [src/commands/hello/index.ts](https://github.com/files/pno-sync-cli/blob/v0.0.0/src/commands/hello/index.ts)_
+_See code: [src/commands/hello/index.ts](https://github.com/files/pno-sync-cli/blob/v0.1.0/src/commands/hello/index.ts)_
 
 ## `pno-sync-cli hello world`
 
@@ -88,7 +108,7 @@ EXAMPLES
   hello world! (./src/commands/hello/world.ts)
 ```
 
-_See code: [src/commands/hello/world.ts](https://github.com/files/pno-sync-cli/blob/v0.0.0/src/commands/hello/world.ts)_
+_See code: [src/commands/hello/world.ts](https://github.com/files/pno-sync-cli/blob/v0.1.0/src/commands/hello/world.ts)_
 
 ## `pno-sync-cli help [COMMAND]`
 
@@ -109,6 +129,23 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.28/src/commands/help.ts)_
+
+## `pno-sync-cli login`
+
+Cli Login for Sync
+
+```
+USAGE
+  $ pno-sync-cli login
+
+DESCRIPTION
+  Cli Login for Sync
+
+EXAMPLES
+  $ pno-sync-cli login
+```
+
+_See code: [src/commands/login.ts](https://github.com/files/pno-sync-cli/blob/v0.1.0/src/commands/login.ts)_
 
 ## `pno-sync-cli plugins`
 
@@ -160,8 +197,8 @@ DESCRIPTION
 
   Installation of a user-installed plugin will override a core plugin.
 
-  Use the SYNC_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
-  Use the SYNC_CLI_NPM_REGISTRY environment variable to set the npm registry.
+  Use the PNO_SYNC_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
+  Use the PNO_SYNC_CLI_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
   $ pno-sync-cli plugins add
@@ -234,8 +271,8 @@ DESCRIPTION
 
   Installation of a user-installed plugin will override a core plugin.
 
-  Use the SYNC_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
-  Use the SYNC_CLI_NPM_REGISTRY environment variable to set the npm registry.
+  Use the PNO_SYNC_CLI_NPM_LOG_LEVEL environment variable to set the npm loglevel.
+  Use the PNO_SYNC_CLI_NPM_REGISTRY environment variable to set the npm registry.
 
 ALIASES
   $ pno-sync-cli plugins add
@@ -400,4 +437,23 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.40/src/commands/plugins/update.ts)_
 
+## `pno-sync-cli send`
+
+Send a payload to a topic channel
+
+```
+USAGE
+  $ pno-sync-cli send --appId <value> --key <value> --topic <value> [--payload <value>]
+
+FLAGS
+  --appId=<value>    (required) App ID
+  --key=<value>      (required) Public Key
+  --payload=<value>  JSON payload to send
+  --topic=<value>    (required) Topic-Name
+
+DESCRIPTION
+  Send a payload to a topic channel
+```
+
+_See code: [src/commands/send.ts](https://github.com/files/pno-sync-cli/blob/v0.1.0/src/commands/send.ts)_
 <!-- commandsstop -->
