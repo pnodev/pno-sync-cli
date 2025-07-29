@@ -1,8 +1,6 @@
 import {Command, Flags} from '@oclif/core'
 import axios, {isAxiosError} from 'axios'
 
-import {isAuthenticated} from '../helpers/auth.js'
-
 export default class Send extends Command {
   static description = 'Send a payload to a topic channel'
   static flags = {
@@ -13,10 +11,6 @@ export default class Send extends Command {
   }
 
   public async run(): Promise<void> {
-    if (!isAuthenticated()) {
-      this.error('❌ Not logged in!')
-    }
-
     const {flags} = await this.parse(Send)
 
     const url = `https://connect.sync.pno.dev/stream/${flags.appId}?key=${flags.key}&topic=${flags.topic}`
