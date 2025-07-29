@@ -28,7 +28,7 @@ $ npm install -g @pnodev/sync-cli
 $ sync-cli COMMAND
 running command...
 $ sync-cli (--version)
-@pnodev/sync-cli/0.1.3 linux-x64 node-v20.5.1
+@pnodev/sync-cli/0.2.0 linux-x64 node-v20.5.1
 $ sync-cli --help [COMMAND]
 USAGE
   $ sync-cli COMMAND
@@ -41,7 +41,6 @@ USAGE
 <!-- commands -->
 * [`sync-cli generate-types`](#sync-cli-generate-types)
 * [`sync-cli help [COMMAND]`](#sync-cli-help-command)
-* [`sync-cli login`](#sync-cli-login)
 * [`sync-cli send`](#sync-cli-send)
 
 ## `sync-cli generate-types`
@@ -62,7 +61,7 @@ DESCRIPTION
   Send a payload to a topic channel
 ```
 
-_See code: [src/commands/generate-types.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/generate-types.ts)_
+_See code: [src/commands/generate-types.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.2.0/src/commands/generate-types.ts)_
 
 ## `sync-cli help [COMMAND]`
 
@@ -84,23 +83,6 @@ DESCRIPTION
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.28/src/commands/help.ts)_
 
-## `sync-cli login`
-
-Cli Login for Sync
-
-```
-USAGE
-  $ sync-cli login
-
-DESCRIPTION
-  Cli Login for Sync
-
-EXAMPLES
-  $ sync-cli login
-```
-
-_See code: [src/commands/login.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/login.ts)_
-
 ## `sync-cli send`
 
 Send a payload to a topic channel
@@ -119,5 +101,5 @@ DESCRIPTION
   Send a payload to a topic channel
 ```
 
-_See code: [src/commands/send.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.1.3/src/commands/send.ts)_
+_See code: [src/commands/send.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.2.0/src/commands/send.ts)_
 <!-- commandsstop -->
