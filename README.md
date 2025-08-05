@@ -2,27 +2,20 @@
 
 The `sync-cli` is the official command-line interface for **Sync**
 
-## Important
-
-For the CLI to work correctly, there **must be a `.env` file in the current working directory containing the environment variable `SYNC_ENGINE_URL`**. This variable specifies the URL of the Sync engine the CLI communicates with. Without it, most commands will not work.
-
-Example `.env` file:
-
-```
-SYNC_ENGINE_URL=https://your-sync-engine-url.example.com
-```
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 
 <!-- toc -->
-* [sync-cli](#sync-cli)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [sync-cli](#sync-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+- [Configuration](#configuration)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @pnodev/sync-cli
 $ sync-cli COMMAND
@@ -34,14 +27,16 @@ USAGE
   $ sync-cli COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`sync-cli generate-types`](#sync-cli-generate-types)
-* [`sync-cli help [COMMAND]`](#sync-cli-help-command)
-* [`sync-cli send`](#sync-cli-send)
+
+- [`sync-cli generate-types`](#sync-cli-generate-types)
+- [`sync-cli help [COMMAND]`](#sync-cli-help-command)
+- [`sync-cli send`](#sync-cli-send)
 
 ## `sync-cli generate-types`
 
@@ -102,4 +97,17 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/send.ts](https://github.com/pnodev/pno-sync-cli/blob/v0.2.0/src/commands/send.ts)_
+
 <!-- commandsstop -->
+
+# Configuration
+
+The behavior of sync-cli can be customized using environment variables. These can be defined in a local `.env` file.
+
+## Overriding the default Sync engine URL
+
+To use a custom Sync Engine URL, create a `.env` file in your project root and add the following line:
+
+```
+SYNC_ENGINE_URL=https://your-sync-engine-url.example.com
+```

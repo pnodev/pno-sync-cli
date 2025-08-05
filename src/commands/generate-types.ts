@@ -82,8 +82,9 @@ export default class GenerateTypes extends Command {
     dotenv.config()
 
     const {flags} = await this.parse(GenerateTypes)
+    const baseUrl = process.env.SYNC_ENGINE_URL || 'https://connect.sync.pno.dev'
 
-    const url = `${process.env.SYNC_ENGINE_URL}/stream/${flags.appId}/schema?key=${flags.key}`
+    const url = `${baseUrl}/stream/${flags.appId}/schema?key=${flags.key}`
 
     try {
       const response = await axios.get(url)
